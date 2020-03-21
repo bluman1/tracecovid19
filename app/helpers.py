@@ -55,6 +55,9 @@ def validate_email(email):
         return False
 
 
+def random_illustration():
+    return str(random.randint(1, 22)) + '.png'
+
 def generate_covid_id(size=8):
     chars = string.digits
     exist = True
