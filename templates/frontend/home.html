@@ -1,0 +1,579 @@
+<!--
+=========================================================
+* Argon Design System - v1.2.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2020 Creative Tim (http://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="/static/img/favicon.png">
+    <title>
+        Trace COVID-19
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="/static/css/nucleo-icons.css" rel="stylesheet"/>
+    <link href="/static/css/nucleo-svg.css" rel="stylesheet"/>
+    <!-- Font Awesome Icons -->
+    <link href="/static/css/font-awesome.css" rel="stylesheet"/>
+    <link href="/static/css/nucleo-svg.css" rel="stylesheet"/>
+    <!-- CSS Files -->
+    <link href="/static/css/argon-design-system.css?v=1.2.0" rel="stylesheet"/>
+</head>
+
+<body class="login-page">
+<!-- Navbar -->
+<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+    <div class="container">
+        <a class="navbar-brand mr-lg-5" href="/">
+            Trace COVID-19
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
+                aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global">
+            <div class="navbar-collapse-header">
+                <div class="row">
+                    <div class="col-6 collapse-brand">
+                        <a href="/">
+                            <img src="/static/img/brand/blue.png">
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global"
+                                aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+
+                <li class="nav-item d-none d-lg-block ml-lg-4">
+                    <a href="https://www.github.com/bluman1/tracecovid19/" target="_blank"
+                       class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon">
+                <i class="fa fa-github"></i>
+              </span>
+                        <span class="nav-link-inner--text">Contribute</span>
+                    </a>
+                    <a href="mailto:info@tracecoid19.app"
+                       class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon">
+                <i class="fa fa-send mr-2"></i>
+              </span>
+                        <span class="nav-link-inner--text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Navbar -->
+<section class="section section-shaped section-lg">
+    <div class="shape shape-style-1 bg-gradient-default">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div id="app" class="container pt-lg-7">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="card bg-secondary shadow border-0">
+                    <div class="card-body px-lg-5 py-lg-5">
+                        <form role="form">
+                            <div class="form-group">
+                                <div class="input-group input-group-alternative mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-world"></i></span>
+                                    </div>
+                                    <select class="form-control" name="country" id="country"
+                                            data-style="btn btn-primary" required id="country"
+                                            title="Country">
+                                        <option selected value="Nigeria">Nigeria
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-alternative mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-square-pin"></i></span>
+                                    </div>
+                                    <select class="form-control selectpicker" name="state" id="state"
+                                            data-style="btn btn-primary" required id="state"
+                                            title="State">
+                                        <option disabled selected>Select State</option>
+                                        <option value="Abia">Abia</option>
+                                        <option value="Adamawa">Adamawa</option>
+                                        <option value="Akwa Ibom">Akwa Ibom</option>
+                                        <option value="Anambra">Anambra</option>
+                                        <option value="Bauchi">Bauchi</option>
+                                        <option value="Bayelsa">Bayelsa</option>
+                                        <option value="Benue">Benue</option>
+                                        <option value="Borno">Borno</option>
+                                        <option value="Cross Rive">Cross River</option>
+                                        <option value="Delta">Delta</option>
+                                        <option value="Ebonyi">Ebonyi</option>
+                                        <option value="Edo">Edo</option>
+                                        <option value="Ekiti">Ekiti</option>
+                                        <option value="Enugu">Enugu</option>
+                                        <option value="FCT">Federal Capital Territory</option>
+                                        <option value="Gombe">Gombe</option>
+                                        <option value="Imo">Imo</option>
+                                        <option value="Jigawa">Jigawa</option>
+                                        <option value="Kaduna">Kaduna</option>
+                                        <option value="Kano">Kano</option>
+                                        <option value="Katsina">Katsina</option>
+                                        <option value="Kebbi">Kebbi</option>
+                                        <option value="Kogi">Kogi</option>
+                                        <option value="Kwara">Kwara</option>
+                                        <option value="Lagos">Lagos</option>
+                                        <option value="Nasarawa">Nasarawa</option>
+                                        <option value="Niger">Niger</option>
+                                        <option value="Ogun">Ogun</option>
+                                        <option value="Ondo">Ondo</option>
+                                        <option value="Osun">Osun</option>
+                                        <option value="Oyo">Oyo</option>
+                                        <option value="Plateau">Plateau</option>
+                                        <option value="Rivers">Rivers</option>
+                                        <option value="Sokoto">Sokoto</option>
+                                        <option value="Taraba">Taraba</option>
+                                        <option value="Yobe">Yobe</option>
+                                        <option value="Zamfara">Zamfara</option>
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-alternative mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-compass-04"></i></span>
+                                    </div>
+                                    <input class="form-control" id="location" name="location"
+                                           placeholder="Type the location." type="text">
+                                    <input type="hidden" id="place_id" name="place_id" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-alternative mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                    </div>
+                                    <input class="form-control" name="date" id="date" placeholder="Date" type="date">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-alternative mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-watch-time"></i></span>
+                                    </div>
+                                    <select class="form-control selectpicker" name="time_range"
+                                            data-style="btn btn-primary" required id="time_range"
+                                            title="Time Range">
+                                        <option selected> Select Time Range
+                                        </option>
+                                        <option value="0-1">00:00 - 01:00 Hrs
+                                        </option>
+                                        <option value="1-2">01:00 - 02:00 Hrs
+                                        </option>
+                                        <option value="2-3">02:00 - 03:00 Hrs
+                                        </option>
+                                        <option value="3-4">03:00 - 04:00 Hrs
+                                        </option>
+                                        <option value="4-5">04:00 - 05:00 Hrs
+                                        </option>
+                                        <option value="5-6">05:00 - 06:00 Hrs
+                                        </option>
+                                        <option value="6-7">06:00 - 07:00 Hrs
+                                        </option>
+                                        <option value="7-8">07:00 - 08:00 Hrs
+                                        </option>
+                                        <option value="8-9">08:00 - 09:00 Hrs
+                                        </option>
+                                        <option value="9-10">09:00 - 10:00 Hrs
+                                        </option>
+                                        <option value="10-11">10:00 - 11:00 Hrs
+                                        </option>
+                                        <option value="11-12">11:00 - 12:00 Hrs
+                                        </option>
+                                        <option value="12-13">12:00 - 13:00 Hrs
+                                        </option>
+                                        <option value="13-14">13:00 - 14:00 Hrs
+                                        </option>
+                                        <option value="14-15">14:00 - 15:00 Hrs
+                                        </option>
+                                        <option value="15-16">15:00 - 16:00 Hrs
+                                        </option>
+                                        <option value="16-17">16:00 - 17:00 Hrs
+                                        </option>
+                                        <option value="17-18">17:00 - 18:00 Hrs
+                                        </option>
+                                        <option value="18-19">18:00 - 19:00 Hrs
+                                        </option>
+                                        <option value="19-20">19:00 - 20:00 Hrs
+                                        </option>
+                                        <option value="20-21">20:00 - 21:00 Hrs
+                                        </option>
+                                        <option value="21-22">21:00 - 22:00 Hrs
+                                        </option>
+                                        <option value="22-23">22:00 - 23:00 Hrs
+                                        </option>
+                                        <option value="23-0">23:00 - 00:00 Hrs
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-alternative mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-user-run"></i></span>
+                                    </div>
+                                    <select class="form-control" name="activities"
+                                            data-style="btn btn-primary" required id="activities"
+                                            title="Activities">
+                                        <option selected> Select Activity
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" onclick="performTrace();" class="btn btn-primary my-4">Trace
+                                </button>
+                            </div>
+                        </form>
+                        <input type="hidden" id="timeline_id" name="timeline_id">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="modal fade" id="modal-high-chance" tabindex="-1" role="dialog" aria-labelledby="modal-notification"
+     aria-hidden="true"
+     style="display: none; padding-right: 17px;">
+    <div class="modal-dialog modal-warning modal-dialog-centered modal-" role="document">
+        <div class="modal-content bg-gradient-warning">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="py-3 text-center">
+                    <i class="ni ni-chart-bar-32 ni-3x"></i>
+                    <h4 class="heading mt-4">Relatively High Chance of Contact!</h4>
+                    <p>There is a relatively high chance you have had contact with a COVID-19 patient.</p>
+                    <div id="high_chance_info">
+
+                    </div>
+                    <p>If you would like to leave your contact information for your country's Department of Health to
+                        reach out to you, please click the button below.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="collectContact();" class="btn btn-white">Reach Out To Me</button>
+                <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-low-chance" tabindex="-1" role="dialog" aria-labelledby="modal-notification"
+     aria-hidden="true"
+     style="display: none; padding-right: 17px;">
+    <div class="modal-dialog modal-success modal-dialog-centered modal-" role="document">
+        <div class="modal-content bg-gradient-success">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="py-3 text-center">
+                    <i class="ni ni-chart-bar-32 ni-3x"></i>
+                    <h4 class="heading mt-4">Relatively Low Chance of Contact!</h4>
+                    <p>There is a relatively low chance you have had contact with a COVID-19 patient.</p>
+                    <div id="low_chance_info">
+
+                    </div>
+                    <p>You can check again with different days and time ranges to cover your past timeline.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-collect-contact" tabindex="-1" role="dialog" aria-labelledby="modal-collect-contact"
+     style="display: none; padding-right: 17px;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="card bg-secondary shadow border-0 mb-0">
+                    <div class="card-body px-lg-5 py-lg-5">
+                        <form role="form">
+                            <div class="form-group mb-3">
+                                <div class="input-group input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                    </div>
+                                    <input class="form-control" placeholder="Email" id="email" name="email"
+                                           type="email">
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="input-group input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
+                                    </div>
+                                    <input class="form-control" placeholder="Phone Number" id="phone_number"
+                                           name="phone_number" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="input-group input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-compass-04"></i></span>
+                                    </div>
+                                    <input class="form-control" placeholder="Current Address" id="address"
+                                           name="address" type="text">
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="button" onclick="reachOut();" class="btn btn-primary my-4">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-contact-collected" tabindex="-1" role="dialog" aria-labelledby="modal-notification"
+     aria-hidden="true"
+     style="display: none; padding-right: 17px;">
+    <div class="modal-dialog modal-primary modal-dialog-centered modal-" role="document">
+        <div class="modal-content bg-gradient-primary">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="py-3 text-center">
+                    <i class="ni ni-curved-next ni-3x"></i>
+                    <h4 class="heading mt-4">Contact Shared</h4>
+                    <p>We have shared your contact information with your country's Department of Health.</p>
+                    <p>Please stay safe and practice social distancing. You can do this!</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="row row-grid align-items-center mb-5">
+            <div class="col-lg-6">
+                <h3 class="text-primary font-weight-light mb-2">Trace COVID-19 is a Simple Contact Tracing App</h3>
+                <h4 class="mb-0 font-weight-light">You can use this app to create a timeline of your movement and
+                    activities and check if it matches that of a COVID-19 patient.</h4>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row align-items-center justify-content-md-between">
+            <div class="col-md-6">
+                <div class="copyright">
+                    &copy; 2020 <a href="" target="_blank">Trace COVID-19</a>.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="nav nav-footer justify-content-end">
+                    <li class="nav-item">
+                        <a href="https://www.michael.ng" class="nav-link" target="_blank">by Michael</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--   Core JS Files   -->
+<script src="/static/js/core/jquery.min.js" type="text/javascript"></script>
+<script src="/static/js/core/popper.min.js" type="text/javascript"></script>
+<script src="/static/js/core/bootstrap.min.js" type="text/javascript"></script>
+<script src="/static/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="/static/js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="/static/js/plugins/nouislider.min.js" type="text/javascript"></script>
+<script src="/static/js/plugins/moment.min.js"></script>
+<script src="/static/js/plugins/datetimepicker.js" type="text/javascript"></script>
+<script src="/static/js/plugins/bootstrap-datepicker.min.js"></script>
+<!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+<script src="/static/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script>
+<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGYrd9MWKMhHYNXtkxmEFmL7NkWwazBdc&libraries=places"></script>
+<script>
+    var input = document.getElementById('location');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.setFields(['place_id']);
+    autocomplete.addListener('place_changed', function () {
+        var place = autocomplete.getPlace();
+        document.getElementById('place_id').value = place.place_id;
+    });
+
+
+    $(document).on('focus', '#activities', function () { //Listen to tracing changes (input changes)
+        var payload = {
+            country: $('#country').val(),
+            state: $('#state').val(),
+            location: $('#location').val(),
+            place_id: $('#place_id').val()
+        };
+
+        async function getActivities(url = '') {
+            // Default options are marked with *
+            const response = await fetch(url, {
+                method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            return await response.json(); // parses JSON response into native JavaScript objects
+        }
+
+        getActivities("{% url "api-activities" %}?" + new URLSearchParams(payload))
+            .then((data) => {
+                $('#activities').find('option').remove();
+                var hasData = false;
+                for (var key in data.data) {
+                    $('#activities').append(`<option value="${data.data[key].name}"> ${data.data[key].name}</option>`);
+                    hasData = true;
+                }
+                if (!hasData) {
+                    // $('#activities').append(`<option value="${data.data[key].name}"> ${data.data[key].name}</option>`);
+                }
+            });
+    });
+
+    async function createTimeline(url = '', data = {}) {
+        // Default options are marked with *
+        const response = await fetch(url, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data) // body data type must match "Content-Type" header
+        });
+        return await response.json(); // parses JSON response into native JavaScript objects
+    }
+
+    async function runTrace(url = '') {
+        // Default options are marked with *
+        const response = await fetch(url, {
+            method: 'GET', // *GET, POST, PUT, DELETE, etc.
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+        return await response.json(); // parses JSON response into native JavaScript objects
+    }
+
+    function performTrace() {
+        var timelinePayload = {
+            country: $('#country').val(),
+            state: $('#state').val(),
+            location: $('#location').val(),
+            place_id: $('#place_id').val(),
+            date: $('#date').val(),
+            time_range: $('#time_range').val(),
+            activities: $('#activities').val()
+        };
+        createTimeline("{% url "api-public-timelines" %}", timelinePayload)
+            .then((data) => {
+                $("#timeline_id").val(data.data['id']);
+                runTrace("/api/trace/" + data.data['id'])
+                    .then((data) => {
+                        var linkText = "<p>Probability: " + data.data['probability'] + "</p>" + "<p>Possible Contacts: " + data.data['possible_contacts'] + "</p>" + "<p>Matching Activities: " + data.data['matched_activities'] + "</p>";
+                        if (data.data['probability'] >= 50) {
+                            $('#high_chance_info').html(linkText);
+                            $("#modal-high-chance").modal()
+                        }
+                        else if (data.data['probability'] < 50) {
+                            $('#low_chance_info').html(linkText);
+                            $("#modal-low-chance").modal()
+                        }
+                    });
+            });
+    }
+
+    async function updateTimeline(url = '', data = {}) {
+        // Default options are marked with *
+        const response = await fetch(url, {
+            method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data) // body data type must match "Content-Type" header
+        });
+        return await response.json(); // parses JSON response into native JavaScript objects
+    }
+
+    function collectContact() {
+        $('#modal-high-chance').modal('toggle');
+        $("#modal-collect-contact").modal();
+    }
+
+    function reachOut() {
+        var contactPayload = {
+            address: $('#address').val(),
+            email: $('#email').val(),
+            phone_number: $('#phone_number').val()
+        };
+        var timelineId = $('#timeline_id').val();
+        updateTimeline("/api/public/timelines/" + timelineId + '/', contactPayload)
+            .then((data) => {
+                $("#modal-collect-contact").modal('toggle');
+                $("#modal-contact-collected").modal();
+            });
+
+    }
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+Django == 2.0
+
+dj-config-url == 0.1.1
+
+dj-database-url == 0.4.2
+
+djangorestframework == 3.7.7
+
+requests == 2.11.1
+
+whitenoise == 3.3.0
+
+psycopg2 == 2.8.2
+
+gunicorn == 19.7.1
+
+sendgrid == 4.2.0
+
+django-extensions == 1.7.9
+
+django-storages == 1.6.3
+
+django-cors-headers  == 2.4.0
+
+python-dateutil == 2.7.3
+
+django-compression-middleware == 0.4.1
+
