@@ -85,7 +85,8 @@ class PublicTimelineSerializer(serializers.ModelSerializer):
 class PotentialContactSerializer(serializers.ModelSerializer):
     patient_timeline = PatientTimelineSerializer(required=False)
     public_timeline = PublicTimelineSerializer(required=False)
+    activities = ActivitySerializer(required=False, many=True)
 
     class Meta:
         model = PotentialContact
-        fields = ('id', 'patient_timeline', 'public_timeline', 'created')
+        fields = ('id', 'probability', 'activities', 'patient_timeline', 'public_timeline', 'created')

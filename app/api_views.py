@@ -345,6 +345,7 @@ def trace_contact(request, public_timeline_id):
         if patient_timelines.exists():
             for patient_timeline in patient_timelines:
                 matches = set()
+                matched_activities_local = []
                 if patient_timeline.country == public_timeline.country:
                     matches.add('country')
                 if patient_timeline.state == public_timeline.state:
@@ -359,6 +360,7 @@ def trace_contact(request, public_timeline_id):
                     if patient_activity in public_timeline.activities.all():
                         matches.add('activity')
                         matched_activities.add(patient_activity.name)
+                        matched_activities_local.append(patient_activity)
                 probability = contact_chance(matches)
                 probabilities.append(probability)
                 if probability >= 50:
@@ -367,6 +369,8 @@ def trace_contact(request, public_timeline_id):
                                                          patient_timeline=patient_timeline,
                                                          patient=patient_timeline.patient)
                     potential_contact.save()
+                    for matched_activity in matched_activities_local:
+                        potential_contact.activities.add(matched_activity)
         try:
             chance = mean(probabilities)
         except statistics.StatisticsError:

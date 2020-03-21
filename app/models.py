@@ -104,6 +104,7 @@ class PotentialContact(models.Model):
     patient_timeline = models.ForeignKey(PatientTimeline, on_delete=models.CASCADE, related_name='Timeline_of_Patient')
     public_timeline = models.ForeignKey(PublicTimeline, on_delete=models.CASCADE, related_name='Timeline_of_Public')
     patient = models.ForeignKey(Patient, on_delete=models.DO_NOTHING)
+    activities = models.ManyToManyField(Activity)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
