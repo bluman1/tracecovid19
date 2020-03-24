@@ -112,7 +112,7 @@ def show_dashboard(request):
             'positive_cases': positive_cases_all,
             'positive_cases_count': len(positive_cases_all),
             'potential_contacts': potential_contacts_all,
-            'potential_contacts_count': len(potential_contacts),
+            'potential_contacts_count': len(potential_contacts_all),
             'public_timelines': public_timelines,
             'average_probability': average_probability,
             'active_tab': 'dashboard'
