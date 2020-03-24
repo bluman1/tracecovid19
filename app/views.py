@@ -144,6 +144,8 @@ def show_positive_cases(request):
             covid_id = request.POST.get('covid_id', None)
             if len(covid_id.strip()) < 1:
                 covid_id = generate_covid_id()
+            else:
+                covid_id = 'COVID-' + covid_id
             nationality = request.POST.get('nationality').capitalize()
             state = request.POST.get('state')
             creator = request.user
