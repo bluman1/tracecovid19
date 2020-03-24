@@ -175,11 +175,11 @@
                                 </thead>
                                 <tbody class="list">
                                 {% for potential_contact in potential_contacts %}
-                                    <td>
+                                    <th>
                                         <a href="{% url "backend-positive-potential-contact-info" potential_contact.pk %}"
                                            data-toggle="tooltip" data-placement="top"
                                            title="Show Potential Contact Info">{{ potential_contact.public_timeline.state }}</a>
-                                    </td>
+                                    </th>
                                     <td>
                                         <a href="{% url "backend-positive-potential-contact-info" potential_contact.pk %}"
                                            data-toggle="tooltip" data-placement="top"

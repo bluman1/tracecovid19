@@ -313,9 +313,9 @@
                             <tbody>
                             {% for positive_case in positive_cases %}
                                 <tr>
-                                    <td>
+                                    <th>
                                         <a href="{% url "backend-positive-case" positive_case.id %}"> {{ positive_case.covid_id }}</a>
-                                    </td>
+                                    </th>
                                     <td>
                                         <a href="{% url "backend-positive-case" positive_case.id %}"> {{ positive_case.nationality }}</a>
                                     </td>

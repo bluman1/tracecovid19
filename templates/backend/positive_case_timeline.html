@@ -270,11 +270,11 @@
                             <tbody class="list">
                             {% for patient_timeline in patient_timelines %}
                                 <tr>
-                                    <td>
+                                    <th>
                                         <a href="{% url "backend-timeline-potential-contact" positive_case.pk patient_timeline.pk %}"
                                            data-toggle="tooltip" data-placement="top"
                                            title="Show Potential Contacts">{{ patient_timeline.date }}</a>
-                                    </td>
+                                    </th>
                                     <td>
                                         <a href="{% url "backend-timeline-potential-contact" positive_case.pk patient_timeline.pk %}"
                                            data-toggle="tooltip" data-placement="top"
