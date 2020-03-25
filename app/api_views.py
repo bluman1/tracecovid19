@@ -381,12 +381,16 @@ def trace_contact(request, public_timeline_id):
                     potential_contact.save()
                     for matched_activity in matched_activities_local:
                         potential_contact.activities.add(matched_activity)
+        top_probability = 0
+        if len(probabilities) > 0:
+            top_probability = probabilities.sort(reverse=True)
         try:
             chance = mean(probabilities)
         except statistics.StatisticsError:
             chance = 0
         response = {
-            'probability': chance,
+            'average_probability': chance,
+            'top_probability': top_probability,
             'possible_contacts': possible_contacts,
             'matched_activities': matched_activities
         }

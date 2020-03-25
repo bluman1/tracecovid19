@@ -625,12 +625,12 @@ You can use this app to create a timeline of your movement and activities and ch
                 $("#timeline_id").val(data.data['id']);
                 runTrace("/api/trace/" + data.data['id'])
                     .then((data) => {
-                        var linkText = "<p>Probability: " + data.data['probability'] + "</p>" + "<p>Possible Contacts: " + data.data['possible_contacts'] + "</p>" + "<p>Matching Activities: " + data.data['matched_activities'] + "</p>";
-                        if (data.data['probability'] >= 50) {
+                        var linkText = "<p>Top Probability: " + data.data['top_probability'] + "</p>" + "<p>Average Probability: " + data.data['average_probability'] + "</p>" + "<p>Possible Contacts: " + data.data['possible_contacts'] + "</p>" + "<p>Matching Activities: " + data.data['matched_activities'] + "</p>";
+                        if (data.data['top_probability'] >= 50) {
                             $('#high_chance_info').html(linkText);
                             $("#modal-high-chance").modal()
                         }
-                        else if (data.data['probability'] < 50) {
+                        else if (data.data['top_probability'] < 50) {
                             $('#low_chance_info').html(linkText);
                             $("#modal-low-chance").modal()
                         }
