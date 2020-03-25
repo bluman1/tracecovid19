@@ -383,7 +383,8 @@ def trace_contact(request, public_timeline_id):
                         potential_contact.activities.add(matched_activity)
         top_probability = 0
         if len(probabilities) > 0:
-            top_probability = probabilities.sort(reverse=True)
+            probabilities.sort(reverse=True)
+            top_probability = probabilities[0]
         try:
             chance = mean(probabilities)
         except statistics.StatisticsError:
