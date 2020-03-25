@@ -3,6 +3,7 @@ import statistics
 from statistics import mean
 
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -84,6 +85,7 @@ def show_login(request):
         return HttpResponseRedirect('/dashboard/')
 
 
+@login_required
 def show_dashboard(request):
     if request.method == 'GET':
         organization = Organization.objects.get(user=request.user)
@@ -121,6 +123,7 @@ def show_dashboard(request):
         pass
 
 
+@login_required
 def show_positive_cases(request):
     if request.method == 'GET':
         msg = None
@@ -158,6 +161,7 @@ def show_positive_cases(request):
             return HttpResponseRedirect('/positive-cases?msg=2')
 
 
+@login_required
 def show_positive_case(request, positive_case_id):
     try:
         positive_case = Patient.objects.get(pk=int(positive_case_id))
@@ -220,6 +224,7 @@ def show_positive_case(request, positive_case_id):
             return HttpResponseRedirect('/positive-cases/' + str(positive_case_id) + '/?msg=2')
 
 
+@login_required
 def show_timeline_potential_contacts(request, positive_case_id, timeline_id):
     organization = Organization.objects.get(user=request.user)
     try:
@@ -244,6 +249,7 @@ def show_timeline_potential_contacts(request, positive_case_id, timeline_id):
         return render(request, 'backend/timeline_potential_contacts.html', c)
 
 
+@login_required
 def show_potential_contacts(request):
     if request.method == 'GET':
         organization = Organization.objects.get(user=request.user)
@@ -260,6 +266,7 @@ def show_potential_contacts(request):
         return render(request, 'backend/all_potential_contacts.html', c)
 
 
+@login_required
 def show_positive_potential_contact(request, potential_contact_id):
     organization = Organization.objects.get(user=request.user)
     try:
@@ -327,6 +334,7 @@ def show_positive_potential_contact(request, potential_contact_id):
         return render(request, 'backend/positive_potential_contacts.html', c)
 
 
+@login_required
 def show_profile(request):
     organization = Organization.objects.get(user=request.user)
     if request.method == 'GET':
