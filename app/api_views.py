@@ -110,7 +110,7 @@ def update_organization_password(request):
 @authentication_classes([])
 def country_message_view(request):
     country = request.GET.get('country', 'Nigeria')
-    org = Organization.objects.filter(country=country)[1]
+    org = Organization.objects.get(country=country)
     serialized = OrganizationSerializer(org)
     return Response(success_msg("Message retrieved", serialized.data), status=status.HTTP_200_OK)
 
