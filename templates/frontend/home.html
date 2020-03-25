@@ -210,7 +210,8 @@ You can use this app to create a timeline of your movement and activities and ch
                                     <input class="form-control" id="location" name="location"
                                            placeholder="Type the location you were at" type="text">
                                     <div class="input-group-append">
-                                        <button type="button" class="btn btn-sm btn-secondary" data-container="body" id="locationPopover"
+                                        <button type="button" class="btn btn-sm btn-secondary" data-container="body"
+                                                id="locationPopover"
                                                 data-toggle="popover" data-color="secondary" data-placement="top"
                                                 data-content="Google maps automatically finds the location for you. If not found, don't worry, just fill it that way.">
                                             <i class="fa fa-info-circle"></i>
@@ -290,7 +291,8 @@ You can use this app to create a timeline of your movement and activities and ch
                                         </option>
                                     </select>
                                     <div class="input-group-append">
-                                        <button type="button" class="btn btn-sm btn-secondary" data-container="body" id="timeRangePopover"
+                                        <button type="button" class="btn btn-sm btn-secondary" data-container="body"
+                                                id="timeRangePopover"
                                                 data-toggle="popover" data-color="secondary" data-placement="top"
                                                 data-content="You can try other time ranges and trace if the one hour range range is not enough.">
                                             <i class="fa fa-info-circle"></i>
@@ -311,7 +313,8 @@ You can use this app to create a timeline of your movement and activities and ch
                                         </option>
                                     </select>
                                     <div class="input-group-append">
-                                        <button type="button" class="btn btn-sm btn-secondary" data-container="body" id="activityPopover"
+                                        <button type="button" class="btn btn-sm btn-secondary" data-container="body"
+                                                id="activityPopover"
                                                 data-toggle="popover" data-color="secondary" data-placement="top"
                                                 data-content="Sometimes, this may be empty. It just means that we have not had any activity reported in the location yet. You can still trace without the activity selected.">
                                             <i class="fa fa-info-circle"></i>
@@ -331,6 +334,7 @@ You can use this app to create a timeline of your movement and activities and ch
         </div>
     </div>
 </section>
+<input type="hidden" id="country_message" name="country_message" value="">
 <div class="modal fade" id="appleMapsModal" tabindex="-1" role="dialog" aria-labelledby="appleMapsModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -486,7 +490,7 @@ You can use this app to create a timeline of your movement and activities and ch
                     <i class="ni ni-curved-next ni-3x"></i>
                     <h4 class="heading mt-4">Contact Shared</h4>
                     <p>We have shared your contact information with your country's Department of Health.</p>
-                    <p>Please stay safe and practice social distancing. You can do this!</p>
+                    <p id="org_message"></p>
                 </div>
             </div>
             <div class="modal-footer">
@@ -631,6 +635,29 @@ You can use this app to create a timeline of your movement and activities and ch
                             $("#modal-low-chance").modal()
                         }
                     });
+            });
+
+        var payload = {
+            country: $('#country').val()
+        };
+
+        async function getData(url = '') {
+            // Default options are marked with *
+            const response = await fetch(url, {
+                method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            return await response.json(); // parses JSON response into native JavaScript objects
+        }
+
+        getData("{% url "api-country-message" %}?" + new URLSearchParams(payload))
+            .then((data) => {
+                console.log(data.data['message']);
+                console.log(data.data);
+                document.getElementById('org_message').innerHTML = data.data['message'];
+                console.log(document.getElementById('org_message').innerHTML);
             });
     }
 

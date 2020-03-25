@@ -14,7 +14,6 @@ from app.models import Organization, Patient, PotentialContact, PublicTimeline, 
 def show_home(request):
     if request.method == 'GET':
         illustration = random_illustration()
-        print(illustration)
         return render(request, 'frontend/home.html', {'illustration': illustration})
 
 

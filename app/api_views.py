@@ -105,6 +105,16 @@ def update_organization_password(request):
             return Response(success_msg("Password change failed. Old password is incorrect.", response), status=status.HTTP_200_OK)
 
 
+@api_view(['GET'])
+@permission_classes(())
+@authentication_classes([])
+def country_message_view(request):
+    country = request.GET.get('country', 'Nigeria')
+    org = Organization.objects.filter(country=country)[1]
+    serialized = OrganizationSerializer(org)
+    return Response(success_msg("Message retrieved", serialized.data), status=status.HTTP_200_OK)
+
+
 @api_view(['GET', 'POST', 'DELETE'])
 @permission_classes((OrganizationPermission,))
 def patients_view(request):
